@@ -22,18 +22,16 @@ export const progressiveBar = (value: number) => {
     return <progress value={value} max={max} />
 }
 
-export const CardProperties: React.FC<InputCompProps> = (props): JSX.Element => {
+export const CardProperties1: React.FC<InputCompProps> = (props): JSX.Element => {
     const { pokemon } = props;
     const { cards, setCards, pocket, setPocket } = useContext(AppContext);
 
-    function removeCardFromList(id: any) {
-        const removed = cards.filter(x => x.id !== id);
-        const list = cards.filter(x => x.id === id);
-        
-        console.log(removed, list);
+    function addCardFromList(id: any) {
 
-        setCards(removed);
-        setPocket(prevState => [...prevState, ...list]);
+        const found = pocket.filter(x => x.id === id);
+        const list = pocket.filter(x => x.id === id);
+        
+        console.log(2424, found);
     }
 
     const { health, strength, weakness, hapiness, damage } = calculateProperties(pokemon);
@@ -41,7 +39,7 @@ export const CardProperties: React.FC<InputCompProps> = (props): JSX.Element => 
     return (
         <Fragment>
             <div className="name">{pokemon.name}</div>
-            <div className="remove-card" onClick={() => removeCardFromList(pokemon.id)}>X</div>
+            <div className="remove-card" onClick={() => addCardFromList(pokemon.id)}>X</div>
             <div className="settings">
                 <span>HP</span>
                 <span className="progress">{progressiveBar(health)}</span>

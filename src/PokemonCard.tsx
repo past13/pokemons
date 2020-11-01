@@ -1,18 +1,27 @@
-import React from 'react';
-import { CardProperties } from './CardProperties';
-import { InputCompProps } from './Models/InputCompProps';
+import React, { Fragment } from 'react';
+import { CardProperties1 } from './CardProperties1';
 
-import './PokemonCard.css';
+import AppContext from "./Models/AppContext";
 
-export const PokemonCard: React.FC<InputCompProps> = (props) => {
-    const { pokemon } = props;
+import './styles/PokemonCard.css';
+
+export const PokemonCard = () => {
+    const { pocket } = React.useContext(AppContext);
+
     return (
-        <div className="card-container">
-            <div className="image">
-                <img src={pokemon.imageUrl} />
-            </div>
-            <CardProperties pokemon={pokemon}/>     
-        </div>
+        <Fragment>
+            <ul className="cards-list">
+                {pocket.map((pokemon: any) => (
+                    <li className="card-container" key={pokemon.id}>
+                        <div className="card">
+                            <div className="image">
+                                <img src={pokemon.imageUrl} />
+                            </div>
+                            <CardProperties1 pokemon={pokemon}/>     
+                        </div> 
+                    </li>
+                ))}
+            </ul>
+        </Fragment>
     )
 }
-
