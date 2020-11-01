@@ -1,10 +1,12 @@
-import React, { useEffect } from 'react';
-import './App.css';
+import React from 'react';
+import './styles/App.scss';
 
-import { useGetCards } from './services/GetCards';
+import { CardsProvider } from './services/GetCards';
 import { PokemonCard } from './PokemonCard';
+import { PokemonPocket } from './PokemonPocket';
 
-import { InputData} from './Models/InputData';
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
 
 const COLORS = {
   Psychic: "#f8a5c2",
@@ -21,28 +23,16 @@ const COLORS = {
 }
 
 export default function App() {
-  const {
-    data,
-    execute,
-  } = useGetCards();
-
-  useEffect(() => {
-    try {
-      execute();  
-    } catch (error) {
-      console.log('error', error)
-    }
-  }, [execute]);
 
   return (
-    <div className="App">
-       <ul>
-        {data && data.map((pokemon: InputData) => (
-          <li key={pokemon.id}>
-            <PokemonCard pokemon={pokemon}/>
-          </li>
-        ))}
-      </ul> 
-    </div>
+    <CardsProvider>
+      <div className="App">
+        <PokemonPocket  />
+        <br />
+        <br />
+        <PokemonCard  />
+      </div>
+    </CardsProvider>
   )
 }
+

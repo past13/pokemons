@@ -1,0 +1,34 @@
+li {
+    list-style: none;
+}
+
+.add-button {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    background-color: rgb(247, 64, 64);
+}
+
+.dot {
+    height: 75px;
+    width: 75px;
+    background-color: rgb(247, 64, 64);
+    border-radius: 50%;
+}
+
+.add-button {
+    cursor: pointer;
+}
+
+.dot:hover  {
+    cursor: pointer;
+}
+
+.modal-test {    
+    max-height: calc(50vh - 210px);
+    overflow-y: auto;
+
+    padding-left: 100px;
+    width: 80vw;  
+    max-width: 100vw;
+}
