@@ -6,14 +6,14 @@ import AppContext from "./Models/AppContext";
 import './styles/PokemonPocket.css';
 
 export const PokemonPocket = () => {
-    const { cards } = React.useContext(AppContext);
+    const { pocket } = React.useContext(AppContext);
 
     return (
         <Fragment>
             <h1 className="pocket-title">My Pokedex</h1>
             <div className="cards-list">
                 <div className="columns">
-                    {cards.map((pokemon: any, index: number) => (
+                    {pocket.map((pokemon: any, index: number) => (
                         <div className="card" key={index}>
                             <div className="image">
                                 <img src={pokemon.imageUrl} />

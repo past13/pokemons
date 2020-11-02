@@ -3,12 +3,11 @@ import { PokenoContext } from "./PokenoContext";
 
 const AppContext = React.createContext<PokenoContext>({
     pocket: [],
-    setPocket: () => [],
+    setPocket: () => {},
     cards: [],
-    setCards: () => []
+    setCards: () => {}
 });
  
 export const AppContextProvider = AppContext.Provider;
-export const AppContextConsumer = AppContext.Consumer;
 
 export default AppContext;

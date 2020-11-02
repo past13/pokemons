@@ -2,7 +2,7 @@ import { InputData, AttackData } from './Models/InputData';
 import { ResultData } from './Models/ResultData';
 
 const getHealth = (item: number): number => {
-    return item > 100 ? 100 : item;
+    return item > 100 ? 100 : item === undefined ? 0 : item;
 }
 
 const getStrength = (item: Array<AttackData>): number => {

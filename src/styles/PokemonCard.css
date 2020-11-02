@@ -20,3 +20,8 @@
 .card-properties {
     display: inline-block;
 }
+
+.search-field {
+    width: 100%;
+    height: 30px;
+}
