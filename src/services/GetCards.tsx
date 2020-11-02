@@ -20,7 +20,6 @@
         const { cards } = await response.json();
         return cards;
       }
-      
     } else {
       response = await fetch(`http://localhost:3030/api/cards?limit=20`);  
       const { cards } = await response.json();
@@ -28,7 +27,7 @@
     }
   };
 
-  export const CardsProvider = ({ children, data }: any): JSX.Element => {
+  export const CardsProvider = ({ children }: any): JSX.Element => {
     const [cards, setCards] = useState<InputData[]>([]);
     const [pocket, setPocket] = useState<InputData[]>([]);
 

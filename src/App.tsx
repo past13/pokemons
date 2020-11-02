@@ -2,7 +2,6 @@ import React from 'react';
 import './styles/App.scss';
 
 import { CardsProvider } from './services/GetCards';
-import { PokemonCard } from './PokemonCard';
 import { PokemonPocket } from './PokemonPocket';
 
 import Modal from "react-bootstrap/Modal";
@@ -28,9 +27,6 @@ export default function App() {
     <CardsProvider>
       <div className="App">
         <PokemonPocket  />
-        <br />
-        <br />
-        <PokemonCard  />
       </div>
     </CardsProvider>
   )
