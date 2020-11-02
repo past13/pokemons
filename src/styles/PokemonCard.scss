@@ -2,26 +2,14 @@
     padding-bottom: 10px;
 }
 
-.card {
-    background-color: #d5d6dc;
-    /* width: 300px; */
-    /* column-count: 2; */
-}
-
 .cards-list {
-    max-height: calc(100vh - 230px);
+    max-height: calc(95vh - 230px);
     overflow-y: auto;
 }
 
-.image {
-    display: inline-block;
-}
-
-.card-properties {
-    display: inline-block;
-}
-
 .search-field {
-    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    width: 95%;
     height: 30px;
 }

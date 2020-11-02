@@ -38,24 +38,31 @@ export const CardProperties: React.FC<InputCompProps> = (props): JSX.Element => 
     
     return (
         <Fragment>
-            <div className="name">{pokemon.name}</div>
-            <div className="remove-card" onClick={() => addCardFromList(pokemon.id, pocket, cards)}>X</div>
-            <div className="settings">
-                <div className="properties">
-                    <div className="prop-name">HP</div>
-                    <div className="prop-bar"><progress value={health} max={100} /></div>
+            <div className="card">
+                <div className="image">
+                    <img src={pokemon.imageUrl} />
                 </div>
-                <div className="properties">
-                    <div className="prop-name">STR</div>
-                    <div className="prop-bar"><progress value={strength} max={100} /></div>
-                </div>
-                <div className="properties">
-                    <div className="prop-name">WEAK</div>
-                    <div className="prop-bar"><progress value={weakness} max={100} /></div>
+                <div className="card-properties">
+                    <div className="name">{pokemon.name}</div>
+                    <div className="remove-card" onClick={() => addCardFromList(pokemon.id, pocket, cards)}>X</div>
+                    <div className="settings">
+                        <div className="properties">
+                            <div className="prop-name">HP</div>
+                            <div className="prop-bar"><progress value={health} max={100} /></div>
+                        </div>
+                        <div className="properties">
+                            <div className="prop-name">STR</div>
+                            <div className="prop-bar"><progress value={strength} max={100} /></div>
+                        </div>
+                        <div className="properties">
+                            <div className="prop-name">WEAK</div>
+                            <div className="prop-bar"><progress value={weakness} max={100} /></div>
+                        </div>
+                    </div>
+
+                    <div className="emojies">{showEmojies(hapiness)}</div>
                 </div>
             </div>
-
-            <div className="emojies">{showEmojies(hapiness)}</div>
         </Fragment>  
     );
 }

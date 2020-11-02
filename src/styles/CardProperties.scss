@@ -1,39 +1,65 @@
-.name {
-    display: inline;
-    font-size: 30px;
+img {
+    height: 240px;
+}
+
+progress {
+    height: 50px;
+    margin-bottom: -20px;
+    margin-top: -10px;
 }
 
 .emojies img{
+    padding-top: 30px;
     width: 45px;
     height: 45px;
     padding-right: 5px;
 }
 
-/* .settings span:nth-child(2){
-    float: right;
-} */
+.image {
+    float: left;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.name {
+    display: inline;
+    font-size: 30px;
+}
 
 .progress {
-    height: 40px;
+    height: 45px;
+}
+
+.card {
+    margin-right: 5px;
+    min-height: 270px;
+    max-height: 270px;
+    background-color: #d5d6dc;
+}
+
+.card:hover ~ .remove-card {
+    background-color: red;
+    color: white;
+}
+
+.card-properties {
+    float: left;
+    width: 250px;
+    padding-top: 20px;
+    padding-left: 15px;
 }
 
 .remove-card {
     display: inline;
+    display: none;
     cursor: pointer;
     font-size: 25px;
-}
-
-.remove-card:hover {
-    color: red;
-}
-
-progress {
-    height: 40px;
-    margin-bottom: -10px;
-    margin-top: -10px;
+    float: right;
 }
 
 .properties {
+    padding-bottom: 5px;
+
     .prop-name {
         display: inline;
     }
@@ -41,4 +67,8 @@ progress {
     .prop-bar {
         float: right;
     }
+}
+
+.card:hover .remove-card {
+    display: inline-block;
 }

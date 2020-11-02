@@ -1,48 +1,6 @@
-.columns {
-    columns: 2;
-}
-
-img {
-    height: 240px;
-}
-
-.pocket-title {
-    text-align: center;
-    margin: 0;
-    font-size: 40px;
-}
-
-.cards-list {
-    height: 700px;
-    // max-height: calc(100vh - 230px);
-    overflow-y: auto;
-}
-
-.card {
-    height: 270px;
-    min-height: 270px;
-    max-height: 270px;
-    
-    margin-bottom: 10px;
-    background-color: #d5d6dc;
-}
-
-.image {
-    float: left;
-    padding-top: 10px;
-    padding-left: 10px;
-}
-
-.card-properties {
-    float: left;
-    width: 250px;
-    padding-top: 20px;
-    padding-left: 15px;
-}
-
 .add-button {
-    height: 80px;
     bottom: 0%;
+    height: 80px;
     padding-bottom: 10px;
     background-color: #ec5656;
 }
@@ -53,12 +11,13 @@ img {
     left: 50%; 
     transform: translate(-50%, -50%); 
     height: 100px; 
-    width: 200px; 
-    border-radius: 200px 200px 0 0; 
+    width: 150px; 
+    border-radius: 150px 150px 0 0; 
     background-color: #ec5656; 
 }
 
 .modal {
+    z-index: 3;
     position: fixed;
     top: 0;
     left: 0;
@@ -68,8 +27,9 @@ img {
   
     .modal-main {
       position:fixed;
+      min-height: 700px;
+
       background: white;
-      width: 80%;
       height: auto;
       top:50%;
       left:50%;
