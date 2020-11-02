@@ -14,11 +14,11 @@
       const { cards } = await response.json();
 
       if (cards.length > 0) {
-        return cards;
+        return cards as InputData[];
       } else {
         response = await fetch(`http://localhost:3030/api/cards?type=${options.input}`);
         const { cards } = await response.json();
-        return cards;
+        return cards as InputData[];
       }
     } else {
       response = await fetch(`http://localhost:3030/api/cards?limit=20`);  

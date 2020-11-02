@@ -5,7 +5,7 @@ import { InputCompProps } from './Models/InputCompProps';
 
 
 import Emoji from "./cute.png";
-import './styles/CardProperties1.css';
+import './styles/CardProperties1.scss';
 
 import { InputData } from './Models/InputData';
 import { updateCardsList } from './utils/helperArray';

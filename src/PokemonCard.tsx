@@ -5,7 +5,7 @@ import { CardProperties1 } from './CardProperties1';
 
 import { getCards } from './services/GetCards';
 
-import './styles/PokemonCard.css';
+import './styles/PokemonCard.scss';
 
 export const PokemonCard = () => {
     const { cards, setCards } = React.useContext(AppContext);
